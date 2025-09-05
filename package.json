@@ -1,7 +1,7 @@
 {
   "name": "biznis-app",
   "version": "1.0.0",
-  "description": "A web app for inventory management",
+  "description": "A web app for managing inventory",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
