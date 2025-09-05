@@ -9,8 +9,7 @@ const products = {
     { id: 6, name: "Peach Berry & Watermelon Mango Peach", quantity: 10, sales: 0, profit: 0 },
     { id: 7, name: "Strawberry Cherry & Kiwi Passion Fruit", quantity: 10, sales: 0, profit: 0 },
     { id: 8, name: "Gummy Bear & Strawberry Cola", quantity: 10, sales: 0, profit: 0 },
-    { id: 9, name: "Triple Melon Ice & Raspberry Watermelon", quantity: 10, sales: 0, profit: 0 },
-    // Pridėkite kitus produktus čia...
+    { id: 9, name: "Triple Melon Ice & Raspberry Watermelon", quantity: 10, sales: 0, profit: 0 }
   ],
   "Dovydas": [
     { id: 1, name: "Watermelon Ice & Lemon Lime", quantity: 10, sales: 0, profit: 0 },
@@ -20,13 +19,12 @@ const products = {
     { id: 5, name: "Blueberry Ice & Black Dragon Ice", quantity: 10, sales: 0, profit: 0 },
     { id: 6, name: "Strawberry Cherry & Kiwi Passion Fruit", quantity: 10, sales: 0, profit: 0 },
     { id: 7, name: "Banana Pineapple Ice & Red Bull Ice", quantity: 10, sales: 0, profit: 0 },
-    { id: 8, name: "Red Bull Strawberry & Blackcurrant Ice", quantity: 10, sales: 0, profit: 0 },
-    // Pridėkite kitus produktus čia...
+    { id: 8, name: "Red Bull Strawberry & Blackcurrant Ice", quantity: 10, sales: 0, profit: 0 }
   ]
 };
 
 // Naudotojo prisijungimas su PIN kodu
-//const PIN_CODES = {
+const PIN_CODES = {
   Evaldas: "6719",
   Dovydas: "5535",
   Admin: "903001"
@@ -97,60 +95,4 @@ function loadProducts() {
 
 function switchUser() {
   const newUser = prompt("Enter new user (Evaldas or Dovydas):");
-  if (newUser === "Evaldas" || newUser === "Dovydas") {
-    currentUser = newUser;
-    localStorage.setItem('currentUser', currentUser);
-    loadProducts();
-  } else {
-    alert("Invalid user.");
-  }
-}
-
-function sellProduct(productId) {
-  const quantity = prompt("How many units sold?");
-  const price = prompt("What is the sale price?");
-  updateProduct(productId, quantity, price, 'sell');
-}
-
-function takeProduct(productId) {
-  const quantity = prompt("How many units will you take for yourself?");
-  updateProduct(productId, quantity, 0, 'take');
-}
-
-function transferProduct(productId) {
-  const targetUser = prompt("Enter the name of the user to transfer to (Evaldas or Dovydas):");
-  if (targetUser !== "Evaldas" && targetUser !== "Dovydas") {
-    alert("Invalid user.");
-    return;
-  }
-  const quantity = prompt("How many units to transfer?");
-  const product = products[currentUser].find(p => p.id === productId);
-  const transferProduct = { ...product, owner: targetUser };
-  products[targetUser].push(transferProduct);
-  updateProduct(productId, quantity, 0, 'transfer', targetUser);
-}
-
-function updateProduct(productId, quantity, price, action, targetUser = currentUser) {
-  const product = products[targetUser].find(p => p.id === productId);
-  if (!product) return;
-
-  switch (action) {
-    case 'sell':
-      product.quantity -= quantity;
-      product.sales += parseInt(quantity);
-      product.profit += parseInt(price) * parseInt(quantity);
-      break;
-    case 'take':
-      product.quantity -= quantity;
-      break;
-    case 'transfer':
-      product.quantity -= quantity;
-      break;
-    default:
-      return;
-  }
-
-  loadProducts();
-}
-
-login();
+  if (newUser === "
