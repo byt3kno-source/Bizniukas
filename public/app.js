@@ -3,17 +3,30 @@ const products = {
   "Evaldas": [
     { id: 1, name: "Fizzy Cherry Ice & Blueberry Cotton Candy", quantity: 10, sales: 0, profit: 0 },
     { id: 2, name: "Mixed Berries & Double Apple Ice", quantity: 10, sales: 0, profit: 0 },
+    { id: 3, name: "Blue Razz Lemonade & Watermelon Bubblegum", quantity: 10, sales: 0, profit: 0 },
+    { id: 4, name: "Strawberry Watermelon Bubblegum & Mixed Fruit", quantity: 10, sales: 0, profit: 0 },
+    { id: 5, name: "Sour Apple Raspberry & Strawberry Big Bang", quantity: 10, sales: 0, profit: 0 },
+    { id: 6, name: "Peach Berry & Watermelon Mango Peach", quantity: 10, sales: 0, profit: 0 },
+    { id: 7, name: "Strawberry Cherry & Kiwi Passion Fruit", quantity: 10, sales: 0, profit: 0 },
+    { id: 8, name: "Gummy Bear & Strawberry Cola", quantity: 10, sales: 0, profit: 0 },
+    { id: 9, name: "Triple Melon Ice & Raspberry Watermelon", quantity: 10, sales: 0, profit: 0 },
     // Pridėkite kitus produktus čia...
   ],
   "Dovydas": [
     { id: 1, name: "Watermelon Ice & Lemon Lime", quantity: 10, sales: 0, profit: 0 },
     { id: 2, name: "Grape Ice & Strawberry Kiwi", quantity: 10, sales: 0, profit: 0 },
+    { id: 3, name: "Strawberry Raspberry Cherry & Love 666", quantity: 20, sales: 0, profit: 0 },
+    { id: 4, name: "Cherry Cola Ice & Strawberry Raspberry Candy", quantity: 10, sales: 0, profit: 0 },
+    { id: 5, name: "Blueberry Ice & Black Dragon Ice", quantity: 10, sales: 0, profit: 0 },
+    { id: 6, name: "Strawberry Cherry & Kiwi Passion Fruit", quantity: 10, sales: 0, profit: 0 },
+    { id: 7, name: "Banana Pineapple Ice & Red Bull Ice", quantity: 10, sales: 0, profit: 0 },
+    { id: 8, name: "Red Bull Strawberry & Blackcurrant Ice", quantity: 10, sales: 0, profit: 0 },
     // Pridėkite kitus produktus čia...
   ]
 };
 
 // Naudotojo prisijungimas su PIN kodu
-const PIN_CODES = {
+//const PIN_CODES = {
   Evaldas: "6719",
   Dovydas: "5535",
   Admin: "903001"
